@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Pokedex</title>
+</head>
+
+<body>
+  <div id="pokedex">
+    <div id="buscador">
+      <button id="boton-voz" title="Hablar" class="icono-voz">🗣</button>
+      <input type="text" id="campo-busqueda" placeholder="Ingresa el nombre o número de un Pokemon">
+      <button id="boton-busqueda">Buscar</button>
+    </div>
+    <div class="contenedor">
+      <div id="resultado">
+        <div id="imagen-pokemon"></div>
+        <div id="informacion-pokemon">
+          <h1 id="nombre-pokemon"></h1>
+          <ul>
+            <li>Tipo: <span id="tipo-pokemon"></span></li>
+            <li>Altura: <span id="altura-pokemon"></span></li>
+            <li>Peso: <span id="peso-pokemon"></span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="audiocontenedor">
+    <div id="audio-controls">
+      <audio id="pokemon-theme" src="gigamax.mp3" autoplay loop></audio>
+      <div>
+        <button id="play-button">Play</button>
+        <button id="pause-button">Pause</button>
+      </div>
+      <div>
+        <button id="prev-button">Prev</button>
+        <button id="next-button">Next</button>
+      </div>
+      <input type="range" id="timeline" min="0" max="100" value="0" class="range-style">
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+
+</html>
