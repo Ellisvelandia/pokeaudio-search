@@ -118,3 +118,11 @@ prevButton.addEventListener("click", function () {
   }
   changeSong(currentSongIndex);
 });
+
+audioElement.addEventListener('timeupdate', () => {
+  const currentTime = audioElement.currentTime;
+  const duration = audioElement.duration;
+  const value = (currentTime / duration) * 100;
+
+  timeline.value = value;
+});
